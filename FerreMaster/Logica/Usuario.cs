@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace FerreMaster.Logica
 {
-	public class Usuario
+    public class Usuario
 	{
 		#region Propiedades
 		// Propiedades de la clase Usuario
@@ -94,6 +96,26 @@ namespace FerreMaster.Logica
 			reader.Close();
 			return roles;
 		}
-		#endregion
-	}
-}
+		public bool ValidarCredenciales(string usuario, string contraseña)
+		{
+			bool esValido = false;
+			int contaUsuario = 0;
+
+
+
+			// Consulta para verificar si existe el usuario con la contraseña dada
+			string query = "SELECT COUNT(1) FROM Usuarios WHERE Usuario = '" + usuario + "' AND Contraseña = '" + contraseña + "'";
+
+			contaUsuario = ComunDB.EjecutarComandoSelect(query);
+
+			// Si la consulta devuelve al menos 1 fila, las credenciales son válidas
+			if (contaUsuario == 1)
+			{
+				esValido = true;
+			}
+
+            return esValido;
+        }
+        #endregion
+    }
+}	

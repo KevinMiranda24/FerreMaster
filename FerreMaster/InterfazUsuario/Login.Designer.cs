@@ -38,8 +38,6 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.lbRol = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,8 +65,6 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BackgroundImage = global::FerreMaster.Properties.Resources._6843484;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.lbRol);
-            this.panel2.Controls.Add(this.cmbRol);
             this.panel2.Controls.Add(button1);
             this.panel2.Controls.Add(this.btnIngresar);
             this.panel2.Controls.Add(this.panel1);
@@ -77,10 +73,12 @@
             this.panel2.Controls.Add(this.lblContraseña);
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(-1, -1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(576, 420);
+            this.panel2.Size = new System.Drawing.Size(573, 417);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnIngresar
             // 
@@ -93,7 +91,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIngresar.Location = new System.Drawing.Point(203, 338);
+            this.btnIngresar.Location = new System.Drawing.Point(201, 336);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(164, 49);
             this.btnIngresar.TabIndex = 12;
@@ -127,7 +125,7 @@
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(268, 303);
+            this.txtContraseña.Location = new System.Drawing.Point(266, 288);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(222, 26);
             this.txtContraseña.TabIndex = 11;
@@ -137,7 +135,7 @@
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(268, 256);
+            this.txtUsuario.Location = new System.Drawing.Point(266, 237);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(222, 26);
             this.txtUsuario.TabIndex = 10;
@@ -150,7 +148,7 @@
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblContraseña.Location = new System.Drawing.Point(59, 295);
+            this.lblContraseña.Location = new System.Drawing.Point(57, 280);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(203, 37);
             this.lblContraseña.TabIndex = 9;
@@ -164,7 +162,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUsuario.Location = new System.Drawing.Point(102, 248);
+            this.lblUsuario.Location = new System.Drawing.Point(112, 229);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(145, 37);
             this.lblUsuario.TabIndex = 8;
@@ -180,39 +178,11 @@
             this.label4.CausesValidation = false;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(166, 159);
+            this.label4.Location = new System.Drawing.Point(164, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 39);
             this.label4.TabIndex = 5;
             this.label4.Text = "Bienvenido/a";
-            // 
-            // cmbRol
-            // 
-            this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbRol.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Items.AddRange(new object[] {
-            "Administrador",
-            "Usuario"});
-            this.cmbRol.Location = new System.Drawing.Point(268, 216);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(158, 28);
-            this.cmbRol.TabIndex = 14;
-            // 
-            // lbRol
-            // 
-            this.lbRol.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbRol.AutoSize = true;
-            this.lbRol.BackColor = System.Drawing.Color.Transparent;
-            this.lbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbRol.Location = new System.Drawing.Point(170, 211);
-            this.lbRol.Name = "lbRol";
-            this.lbRol.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbRol.Size = new System.Drawing.Size(77, 37);
-            this.lbRol.TabIndex = 15;
-            this.lbRol.Text = "Rol:";
-            this.lbRol.Click += new System.EventHandler(this.label2_Click);
             // 
             // Login
             // 
@@ -230,6 +200,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -248,8 +219,6 @@
 		private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbRol;
-        private System.Windows.Forms.ComboBox cmbRol;
     }
 }
 
