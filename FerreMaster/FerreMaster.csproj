@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfazClientes\clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazClientes\clientes.Designer.cs">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfazfactura\facturacion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfazfactura\facturacion1.Designer.cs">
+      <DependentUpon>facturacion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\inventario.Designer.cs">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica\ComunDB.cs" />
     <Compile Include="InterfazUsuario\Login.cs">
       <SubType>Form</SubType>
@@ -58,8 +76,17 @@
     <Compile Include="Logica\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InterfazClientes\clientes.resx">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfazfactura\facturacion1.resx">
+      <DependentUpon>facturacion1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazUsuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\inventario.resx">
+      <DependentUpon>inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,5 +120,6 @@
   <ItemGroup>
     <None Include="Resources\borrar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
