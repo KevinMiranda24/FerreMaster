@@ -1,0 +1,10 @@
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.Form1.resources
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\ivan\Desktop\proyectodeprogramacion\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
